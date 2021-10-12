@@ -1,14 +1,23 @@
 {
-  "name": "static-site",
+  "name": "README-Generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple node.js application used in the CLI to generate an appropriate README.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cole-cochran/README-Generator.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cole-cochran/README-Generator/issues"
+  },
+  "homepage": "https://github.com/cole-cochran/README-Generator#readme",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "inquirer": "^8.2.0"
   }
 }
