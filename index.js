@@ -22,7 +22,7 @@ inquirer
         message:"Enter your GitHub profile."
     },{
         type:'input',
-        name:'email',
+        name:'contact',
         message:"Enter your email to contact about the project."
     },{
         type:'input',

@@ -1,8 +1,8 @@
 
-  # Cole
+  # Readme
 
   # Description
-  Readme
+  A generator for clean readme's
 
   ## Table of Contents
 
@@ -20,27 +20,27 @@
 
   * [contact](#contact)
 
-  ## install
+  ## Install
 
-  install here
-  ## contributers
+  install in cli
+  ## Contributers
 
   Sangeetha
-  ## usage
+  ## Usage
 
-  Generate readme
-  ## license
+  Used to generate a read me
+  ## License
 
   MIT
 
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
   
-  ## tests
+  ## Tests
 
   none
 
   ## Profile
-  [github](https://github.com/https://github.com/cole-cochran)
+  [github](https://github.com/cole-cochran/README-Generator)
 
   ## Contact
-  []
+  [Contact Us](mailto:colecochran405@gmail.com)

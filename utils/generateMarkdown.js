@@ -47,22 +47,22 @@ function generateMarkdown(data) {
 
   * [contact](#contact)
 
-  ## install
+  ## Install
 
   ${data.install}
-  ## contributers
+  ## Contributers
 
   ${data.contributers}
-  ## usage
+  ## Usage
 
   ${data.usage}
-  ## license
+  ## License
 
   ${data.license}
 
   ![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg)
   
-  ## tests
+  ## Tests
 
   ${data.tests}
 
@@ -70,7 +70,7 @@ function generateMarkdown(data) {
   [github](https://github.com/${data.profile})
 
   ## Contact
-  []
+  [Contact Us](mailto:${data.contact})
 `;
 }
 
