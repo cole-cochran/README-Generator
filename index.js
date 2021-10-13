@@ -1,8 +1,11 @@
+// const to require instructor
 const inquirer = require('inquirer')
+//import { writeFile} from 'fs'
 const fs = require('fs');
-const generateMarkdown = require("./utils/generateMarkdown")
-console.log(generateMarkdown)
 //import generateMarkdown from './utils/generateMarkdown.js'
+const generateMarkdown = require("./utils/generateMarkdown")
+
+
 //import { writeFile} from 'fs'
 // TODO: Create an array of questions for user input
 inquirer
@@ -39,18 +42,13 @@ inquirer
     }
 ])
 // TODO: Create a function to write README file
-
 function writeToFile(fileName, data) {
-    fs.writeFile("README.md",'\n',(err)=>
-    err ? console.log(err) : console.log('gennyMD4u'))
-//     fs.writeFile("README.md",JSON.stringify(fileName, data,'\t'),(err)=>
-//   err ? console.log(err) : console.log('success!')
-//   )
- }
-//  )
-// TODO: Create a function to initialize app
-function init() {
-    //writeToFile(fileName,data)
+    fs.writeFileSync(fileName, generateMarkdown(data))
 }
-// Function call to initialize app
-init()
+function init() {
+    inquirer.prompt(questions)
+        .then((response) => {
+            writeToFile("generateREADME.md", response)
+        })
+}
+init();
