@@ -4,8 +4,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 //import generateMarkdown from './utils/generateMarkdown.js'
 const generateMarkdown = require("./utils/generateMarkdown");
-// const questions = ('response');
-// TODO: Create an array of questions for user input
+//Create an array of questions for user input to fill in the README.
 inquirer
  .prompt ([
     {
@@ -15,11 +14,11 @@ inquirer
     },{
         type:'input',
         name:'description',
-        message:"Enter the Description of the repository."
+        message:"Enter the description of the repository."
     },{
         type:'input',
         name:'profile',
-        message:"Enter your GitHub profile."
+        message:"Enter your GitHub repository."
     },{
         type:'input',
         name:'contact',
@@ -48,17 +47,9 @@ inquirer
     }
 ])
 .then((response) => {
-    writeToFile("./utils/README.md", response)
+    writeToFile("./README.md", response)
 })
-// TODO: Create a function to write README file
+// Function to write to the README.
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, generateMarkdown(data))
 }
-// Funtion to initialize the README file.
-// function init() {
-//     inquirer.prompt(questions)
-//         .then((response) => {
-//             writeToFile("./utils/README.md", response)
-//         })
-// };
-// init();
