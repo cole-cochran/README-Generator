@@ -1,12 +1,10 @@
 // const to require instructor
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
 //import { writeFile} from 'fs'
 const fs = require('fs');
 //import generateMarkdown from './utils/generateMarkdown.js'
-const generateMarkdown = require("./utils/generateMarkdown")
-
-
-//import { writeFile} from 'fs'
+const generateMarkdown = require("./utils/generateMarkdown");
+// const questions = ('response');
 // TODO: Create an array of questions for user input
 inquirer
  .prompt ([
@@ -18,6 +16,14 @@ inquirer
         type:'input',
         name:'description',
         message:"Enter the Description of the repository."
+    },{
+        type:'input',
+        name:'profile',
+        message:"Enter your GitHub profile."
+    },{
+        type:'input',
+        name:'email',
+        message:"Enter your email to contact about the project."
     },{
         type:'input',
         name:'install',
@@ -41,14 +47,18 @@ inquirer
         message:"List the tests used for the application."
     }
 ])
+.then((response) => {
+    writeToFile("./utils/README.md", response)
+})
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, generateMarkdown(data))
 }
-function init() {
-    inquirer.prompt(questions)
-        .then((response) => {
-            writeToFile("generateREADME.md", response)
-        })
-}
-init();
+// Funtion to initialize the README file.
+// function init() {
+//     inquirer.prompt(questions)
+//         .then((response) => {
+//             writeToFile("./utils/README.md", response)
+//         })
+// };
+// init();
