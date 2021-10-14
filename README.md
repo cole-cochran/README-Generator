@@ -37,7 +37,7 @@
   
   ## Tests
 
-  Testing was completed by writing code, and checking what broke in a different part of the application. Until it worked.
+  Testing was done by writing code, checking to see if it worked, and fixing any bugs along the way.
 
   ## Profile
   [GitHub](https://github.com/cole-cochran/README-Generator)
